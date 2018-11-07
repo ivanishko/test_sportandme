@@ -11,6 +11,12 @@ class EntryForm extends Model
 	public $email;
 	public $textarea;
 
+	public $reCaptcha;
+
+
+    
+
+
 	public function rules()
 	{
 		return [
@@ -20,6 +26,8 @@ class EntryForm extends Model
 			['sname', 'match', 'pattern' => '/^[а-яА-ЯёЁa-z]+$/', 'message' => 'В фамилии только буквы!'], 	
 			[['name','sname','phone','email','textarea'], 'required'],
 			['email', 'email'],
+			[['reCaptcha'], \himiklab\yii2\recaptcha\ReCaptchaValidator::className(), 'secret' => 'your secret key', 'uncheckedMessage' => 'Please confirm that you are not a bot.'],  
+			
 		];
 	}
 }

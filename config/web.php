@@ -12,6 +12,15 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+
+        'reCaptcha' => [
+        'name' => 'reCaptcha',
+        'class' => 'himiklab\yii2\recaptcha\ReCaptcha',
+        'siteKey' => '6LfXQXkUAAAAAMYipUNkdxaNBYbTeIO-_yRj9yxI',
+        'secret' => '6LfXQXkUAAAAAGwX6-deiwQUQ7IGKo24MO3PpEDw',
+    ],
+
+
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'KPIwZgCGUc2quB4zojiKd5vywoCMZhEO',
@@ -53,6 +62,8 @@ $config = [
         */
     ],
     'params' => $params,
+
+    
 ];
 
 if (YII_ENV_DEV) {
@@ -70,6 +81,9 @@ if (YII_ENV_DEV) {
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
+
+
+
 }
 
 return $config;
