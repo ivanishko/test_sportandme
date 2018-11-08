@@ -138,11 +138,14 @@ class SiteController extends Controller
 
         
 
-         $model->save();
+
 
         if ($model -> load(Yii::$app->request->post()) && $model->validate()) {
 
             if ($model -> save() ) {
+                 $model->name = ucfirst($model->name);
+                 $model->sname = ucfirst($model->sname);
+
                  return $this->render ('entry-confirm', ['model'=> $model]);
             }
             // данные в $model успешно проверены

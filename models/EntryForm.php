@@ -18,9 +18,11 @@ class EntryForm extends ActiveRecord
 		return 'posts';
 	}
 
+
+
    
 	public function rules()
-	{
+	{	
 		return [
 			['name', 'string', 'min' => 4],
 			['sname', 'string', 'min' => 3],
