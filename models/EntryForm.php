@@ -18,6 +18,7 @@ class EntryForm extends ActiveRecord
 		return 'posts';
 	}
 
+	
 
 
    
