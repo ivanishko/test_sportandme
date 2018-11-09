@@ -18,14 +18,14 @@ class EntryForm extends ActiveRecord
 		return 'posts';
 	}
 
-	
+
 
 
    
 	public function rules()
 	{	
 		return [
-			['name', 'string', 'min' => 4],
+			['name', 'string', 'min' => 3],
 			['sname', 'string', 'min' => 3],
 			['name', 'match', 'pattern' => '/^[а-яА-ЯёЁa-z]+$/', 'message' => 'В имени только буквы!'], 
 			['sname', 'match', 'pattern' => '/^[а-яА-ЯёЁa-z]+$/', 'message' => 'В фамилии только буквы!'], 	
