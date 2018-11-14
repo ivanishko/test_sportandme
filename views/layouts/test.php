@@ -95,7 +95,7 @@ use yii\widgets\ActiveForm;
 
         
 
-<div class="footer_nav">
+    s<div class="footer_nav">
                 <ul class="menu_nav">
                     <li><a href="">Новости</a></li>
                     <li><a href="">Карта покрытия</a></li>
